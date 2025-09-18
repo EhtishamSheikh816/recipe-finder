@@ -1,0 +1,28 @@
+.footer-sec {
+  background-color: #ffffff;
+  padding: 16px 18px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: #777777;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.footer-sec p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-name {
+  color: #4c8c72;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-name:hover {
+  color: #5ea887;
+}

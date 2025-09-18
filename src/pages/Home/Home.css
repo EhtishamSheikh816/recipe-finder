@@ -1,0 +1,43 @@
+.home-sec {
+  width: 100%;
+  flex: 1;
+  padding: 16px;
+}
+
+.home-tittle {
+  color: #333333;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  position: relative;
+  letter-spacing: 0.5px;
+  margin: 28px 0 18px 0;
+}
+
+.home-tittle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #5ea887;
+  border-radius: 2px;
+}
+
+.card-sec {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .home-tittle {
+    font-size: 1.8rem;
+  }
+  .card-sec {
+    padding: 20px 4px;
+  }
+}

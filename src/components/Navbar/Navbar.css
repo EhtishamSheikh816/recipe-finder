@@ -1,0 +1,141 @@
+/* Main Navbar */
+.navbar {
+  padding: 8px 40px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo Section */
+.nav-logo-sec {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: auto;
+}
+
+.logo-txt {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+}
+
+/* Links Section */
+.nav-links-sec ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.normal-link {
+  color: #777777;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.normal-link:hover {
+  color: #5ea887;
+}
+
+.active-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c8c72;
+  border-bottom: 2px solid #4c8c72;
+  padding-bottom: 2px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 20px 8px 12px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links-sec {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 16px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links-sec.open {
+    display: flex;
+    animation: slideIn 0.3s ease;
+  }
+
+  .nav-links-sec ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .logo-txt {
+    font-size: 18px;
+  }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

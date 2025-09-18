@@ -1,0 +1,158 @@
+.about {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f9f9f9, #f1fdf6);
+  min-height: calc(100vh - 120px);
+  padding: 2rem 1rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.about-sec {
+  max-width: 900px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-sec:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.about-tittle {
+  text-align: center;
+  color: #5ea887;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about-tittle::after {
+  content: "";
+  display: block;
+  margin: 0.6rem auto 0;
+  width: 80px;
+  height: 3px;
+  background-color: #5ea887;
+  border-radius: 2px;
+}
+
+.about-subHeading {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  border-left: 4px solid #5ea887;
+  padding-left: 0.8rem;
+  font-weight: 600;
+}
+
+.about-para {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+}
+
+.about-links li {
+  margin: 0.7rem 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.about-links a {
+  color: #5ea887;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.about-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #5ea887;
+  transition: width 0.3s ease;
+}
+
+.about-links a:hover {
+  color: #4b8f72;
+}
+
+.about-links a:hover::after {
+  width: 100%;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .about-sec {
+    padding: 1.8rem;
+  }
+
+  .about-tittle {
+    font-size: 2rem;
+  }
+
+  .about-subHeading {
+    font-size: 1.4rem;
+  }
+
+  .about-para {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-links li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-sec {
+    padding: 1.2rem;
+  }
+
+  .about-tittle {
+    font-size: 1.7rem;
+  }
+
+  .about-subHeading {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+  }
+
+  .about-para {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-links li {
+    font-size: 0.95rem;
+  }
+}
